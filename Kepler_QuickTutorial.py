@@ -9,31 +9,26 @@ get_ipython().system('pip install keplergl')
 
 # In[2]:
 
-
+# Run imports
 import pandas as pd
 import geopandas as gpd
 import keplergl
 
 
-# In[ ]:
-
-
-kepler_config = 
-
 
 # In[3]:
 
 
-df_BikeShares = pd.read_csv("2019_Pace_BikeActivity_Data.csv")
-df_BikeShares.head()
+df = pd.read_csv("YOUR_FILE_HERE.csv") # KEPLER.GL CAN READ GeoJSON, JSON, CSV
+df.head()
 
 
 # In[5]:
 
 
 # lat and lon to numeric, errors converted to nan
-df_BikeShares['longitude'] = pd.to_numeric(df_BikeShares.longitude, errors='coerce')
-df_BikeShares['latitude'] = pd.to_numeric(df_BikeShares.latitude, errors='coerce')
+df['longitude'] = pd.to_numeric(df_BikeShares.longitude, errors='coerce')
+df['latitude'] = pd.to_numeric(df_BikeShares.latitude, errors='coerce')
 
 
 # In[7]:
@@ -44,7 +39,7 @@ kepler_map = keplergl.KeplerGl(height=400) # more map configs can be added for e
 kepler_map
 
 # Add data to map
-kepler_map.add_data(data=df_BikeShares, name="Pace_BikeShare_Data")
+kepler_map.add_data(data=df, name="NAME_OF_ANALYSIS")
 
 
 # In[8]:
@@ -58,17 +53,10 @@ kepler_map
 
 
 # Generate the visualization and save as local HTML file
-kepler_map.save_to_html(file_name='Pace_BikeShare_Data.html', 
-                        data={"Pace_BikeShare_Data": file})
+kepler_map.save_to_html(file_name='NAME_OF_FILE.html', 
+                        data={"NAME_OF_ANALYSIS": file})
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
