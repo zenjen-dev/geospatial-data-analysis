@@ -1,6 +1,6 @@
 ### geospatial-data-analysis [readme]
 
-Enclosed notebook generates a basic Kepler.gl data visualization, **without pre-configurations**
+Use this code in your Python IDE or notebook to generate a basic Kepler.gl data visualization, **without pre-configurations**
 <br>
 Config for map must be added to notebook for easier viewing, and sharing of final map
 <br><br>
