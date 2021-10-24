@@ -27,8 +27,8 @@ df.head()
 
 
 # lat and lon to numeric, errors converted to nan
-df['longitude'] = pd.to_numeric(df_BikeShares.longitude, errors='coerce')
-df['latitude'] = pd.to_numeric(df_BikeShares.latitude, errors='coerce')
+df['longitude'] = pd.to_numeric(df.longitude, errors='coerce')
+df['latitude'] = pd.to_numeric(df.latitude, errors='coerce')
 
 
 # In[7]:
